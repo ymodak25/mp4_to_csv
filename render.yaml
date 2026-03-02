@@ -1,7 +1,8 @@
 services:
   - type: web
     name: mp4-to-csv
-    runtime: python
-    pythonVersion: 3.10
+    runtime:
+      type: python
+      version: 3.10
     buildCommand: "pip install -r requirements.txt"
     startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
