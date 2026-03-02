@@ -1,6 +1,8 @@
 fastapi
-uvicorn
+uvicorn[standard]
 python-multipart
-mediapipe
-opencv-python
+
+mediapipe==0.10.9
+opencv-python-headless==4.9.0.80
 numpy
+pandas
