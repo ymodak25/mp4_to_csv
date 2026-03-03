@@ -1,9 +1,9 @@
 services:
   - type: web
     name: mp4-to-csv
-    runtime:
-      type: python
-      version: 3.10
+    runtime: python3
     buildCommand: "pip install -r requirements.txt"
     startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
-    source: .
+    env:
+      - name: PYTHONPATH
+        value: "."
